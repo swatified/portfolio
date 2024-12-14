@@ -13,12 +13,12 @@ export default function Home() {
           {/* Content Container */}
           <div className="flex flex-col items-center relative w-full max-w-7xl mx-auto px-4">
             {/* Title */}
-            <div className="ml-[20%]">
-              <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold leading-tight relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-                Hi, I'm Swati Sharma.
+            <div className="ml-[28%] -translate-y-1/4">
+              <h1 className="text-4xl md:text-4xl lg:text-5xl font-semibold leading-tight relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 via-neutral-800 to-neutral-800 dark:from-neutral-900 dark:via-white dark:to-black">
+                Hi, I am Swati Sharma.
               </h1>
-              <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold leading-tight relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-                I craft digital experiences with <Cover>code & creativity</Cover>
+              <h1 className="text-4xl md:text-4xl lg:text-5xl font-semibold leading-tight relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white max-w-[30ch]">
+                I craft digital experiences with <Cover>code and creativity</Cover>
               </h1>
             </div>
 
@@ -37,7 +37,7 @@ export default function Home() {
               </div>
 
               {/* Breadcrumb - with left margin to avoid cloud */}
-              <div className="ml-[300px]">
+              <div className="ml-[300px] -translate-y-3/4">
                 <Breadcrumb />
               </div>
             </div>
