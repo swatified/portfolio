@@ -13,7 +13,7 @@ export default function Home() {
           {/* Content Container */}
           <div className="flex flex-col items-center relative w-full max-w-7xl mx-auto px-4">
             {/* Title */}
-            <div className="ml-[20%] max-w-[35ch]">
+            <div className="ml-[20%]">
               <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold leading-tight relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
                 Hi, I'm Swati Sharma.
               </h1>
