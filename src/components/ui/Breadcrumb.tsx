@@ -13,31 +13,44 @@ const Breadcrumb = () => {
           key={index}
           className={`
             float-right p-[6px] bg-black rounded-[50px] relative -ml-[50px]
-            transition-all duration-200 mt-[3px] translate-y-8
+            transition-all duration-500 ease-in-out mt-[3px] transform translate-y-8 
+            hover:-translate-y-0
             ${index === arr.length - 1 ? 'last:hover:mt-0' : ''}
           `}
         >
           <a
             href="#"
             className={`
-              overflow-hidden rounded-[50px] transition-all duration-200
-              no-underline h-[60px] text-white bg-[#181A1C] text-center
-              min-w-[180px] block leading-[60px] w-[80px] -translate-y-4
-              hover:w-[300px] hover:h-[60px] hover:leading-[70px] hover:bg-[#0C0F13]
+              overflow-hidden rounded-[50px] 
+              transition-all duration-500 ease-in-out
+              no-underline h-[60px] text-white bg-[#181A1C]
+              min-w-[180px] block leading-[60px] w-[80px] 
+              hover:min-w-[220px] relative
               group
-              ${index === arr.length - 1 ? 'p-0 last:group-hover:w-[60px] last:group-hover:h-[70px] last:group-hover:leading-[70px]' : 'pl-[60px] pr-[22px]'}
+              ${index === arr.length - 1 ? 'p-0 last:group-hover:w-[60px] last:group-hover:h-[70px] last:group-hover:leading-[70px]' : ''}
             `}
           >
-            <span className="inline-block align-middle">
+            <span className="
+              absolute left-1/2 transform -translate-x-1/2
+              transition-all duration-500 ease-in-out
+              group-hover:left-8 group-hover:-translate-x-0
+            ">
               <item.Icon
                 size={28}  
                 fill="white"
                 stroke="black"
                 strokeWidth={1}
+                className="translate-y-1/2 transition-colors duration-500 ease-in-out group-hover:fill-blue-400"
               />
             </span>
             {item.text && (
-              <span className="hidden opacity-0 group-hover:inline-block group-hover:opacity-100 ml-4 translate-y--4 align-middle">
+              <span className="
+                absolute left-16 opacity-0 
+                transition-all duration-500 ease-in-out
+                transform translate-x-4
+                group-hover:opacity-100 group-hover:translate-x-0
+                inline-block align-middle ml-8
+              ">
                 {item.text}
               </span>
             )}
