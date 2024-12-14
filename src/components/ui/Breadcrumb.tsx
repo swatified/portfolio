@@ -12,8 +12,8 @@ const Breadcrumb = () => {
         <li
           key={index}
           className={`
-            float-right p-[5px] bg-black rounded-[50px] relative -ml-[50px]
-            transition-all duration-200 mt-[3px]
+            float-right p-[6px] bg-black rounded-[50px] relative -ml-[50px]
+            transition-all duration-200 mt-[3px] translate-y-8
             ${index === arr.length - 1 ? 'last:hover:mt-0' : ''}
           `}
         >
@@ -21,16 +21,16 @@ const Breadcrumb = () => {
             href="#"
             className={`
               overflow-hidden rounded-[50px] transition-all duration-200
-              no-underline h-[50px] text-white bg-[#181A1C] text-center
-              min-w-[150px] block leading-[50px] w-[50px]
-              hover:w-[250px] hover:bg-[#0C0F13]
+              no-underline h-[60px] text-white bg-[#181A1C] text-center
+              min-w-[180px] block leading-[60px] w-[80px] -translate-y-4
+              hover:w-[300px] hover:h-[60px] hover:leading-[70px] hover:bg-[#0C0F13]
               group
-              ${index === arr.length - 1 ? 'p-0 last:group-hover:w-[60px] last:group-hover:h-[60px] last:group-hover:leading-[60px]' : 'pl-[60px] pr-[22px]'}
+              ${index === arr.length - 1 ? 'p-0 last:group-hover:w-[60px] last:group-hover:h-[70px] last:group-hover:leading-[70px]' : 'pl-[60px] pr-[22px]'}
             `}
           >
             <span className="inline-block align-middle">
               <item.Icon
-                size={24}  
+                size={28}  
                 fill="white"
                 stroke="black"
                 strokeWidth={1}
