@@ -32,7 +32,7 @@ export default function Android() {
       ],
       github: "https://github.com/swatified/verbix",
       videos: [
-        { id: 5, src: "/out.mp4" },
+        { id: 5, src: "/android-5.mp4" },
         { id: 6, src: "/android-6.mp4" },
         { id: 7, src: "/android-7.mp4" },
         { id: 8, src: "/android-8.mp4" },
