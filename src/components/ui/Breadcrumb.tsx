@@ -1,14 +1,35 @@
+'use client';
+
 import { SmartphoneCharging, GithubIcon, CodeIcon, BrainIcon } from "lucide-react";
+import Link from 'next/link';
 
 const Breadcrumb = () => {
+  const items = [
+    { 
+      Icon: BrainIcon, 
+      text: "ml projects",
+      href: "/ml-projects" 
+    },
+    { 
+      Icon: GithubIcon, 
+      text: "open source",
+      href: "/open-source" 
+    },
+    { 
+      Icon: CodeIcon, 
+      text: "web dev",
+      href: "/web-dev" 
+    },
+    { 
+      Icon: SmartphoneCharging, 
+      text: "android apps",
+      href: "/android" 
+    }
+  ];
+
   return (
     <ul className="inline-block ml-[50px] list-none p-0 m-0">
-      {[
-        { Icon: BrainIcon, text: "ml projects" },
-        { Icon: GithubIcon, text: "open source" },
-        { Icon: CodeIcon, text: "web dev" },
-        { Icon: SmartphoneCharging, text: "android apps" }
-      ].map((item, index, arr) => (
+      {items.map((item, index, arr) => (
         <li
           key={index}
           className={`
@@ -18,8 +39,8 @@ const Breadcrumb = () => {
             ${index === arr.length - 1 ? 'last:hover:mt-0' : ''}
           `}
         >
-          <a
-            href="#"
+          <Link
+            href={item.href}
             className={`
               overflow-hidden rounded-[50px] 
               transition-all duration-500 ease-in-out
@@ -35,8 +56,8 @@ const Breadcrumb = () => {
               transition-all duration-500 ease-in-out
               group-hover:left-8 group-hover:-translate-x-0
             ">
-              <item.Icon
-                size={28}  
+              <item.Icon 
+                size={28}
                 fill="white"
                 stroke="black"
                 strokeWidth={1}
@@ -54,7 +75,7 @@ const Breadcrumb = () => {
                 {item.text}
               </span>
             )}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
