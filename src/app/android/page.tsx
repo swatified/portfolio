@@ -17,10 +17,10 @@ export default function Android() {
       ],
       github: "https://github.com/swatified/safebite",
       videos: [
-        { id: 1, src: "/android-1.mp4" },
-        { id: 2, src: "/android-2.mp4" },
-        { id: 3, src: "/android-3.mp4" },
-        { id: 4, src: "/android-4.mp4" }
+        { id: 1, src: "/videos/android-1.mp4" },
+        { id: 2, src: "/videos/android-2.mp4" },
+        { id: 3, src: "/videos/android-3.mp4" },
+        { id: 4, src: "/videos/android-4.mp4" }
       ]
     },
     {
@@ -32,11 +32,11 @@ export default function Android() {
       ],
       github: "https://github.com/swatified/verbix",
       videos: [
-        { id: 5, src: "/android-5.mp4" },
-        { id: 6, src: "/android-6.mp4" },
-        { id: 7, src: "/android-7.mp4" },
-        { id: 8, src: "/android-8.mp4" },
-        { id: 9, src: "/android-9.mp4" }
+        { id: 5, src: "/videos/android-5.mp4" },
+        { id: 6, src: "/videos/android-6.mp4" },
+        { id: 7, src: "/videos/android-7.mp4" },
+        { id: 8, src: "/videos/android-8.mp4" },
+        { id: 9, src: "/videos/android-9.mp4" }
       ]
     },
     {
@@ -49,8 +49,8 @@ export default function Android() {
       ],
       github: "https://github.com/swatified/androidquiz",
       videos: [
-        { id: 10, src: "/android-10.mp4" },
-        { id: 11, src: "/android-11.mp4" }
+        { id: 10, src: "/videos/android-10.mp4" },
+        { id: 11, src: "/videos/android-11.mp4" }
       ]
     }
   ];
@@ -58,7 +58,7 @@ export default function Android() {
   return (
     <div className="relative min-h-screen">
       <div className="fixed inset-0">
-        <GridBackground />
+        <GridBackground/>
       </div>
       <div className="relative z-10">
         <div className="container mx-auto pt-20 pb-32">

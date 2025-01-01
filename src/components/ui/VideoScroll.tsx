@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Play, Pause } from 'lucide-react';
 
 interface Video {
@@ -13,9 +13,13 @@ interface VideoScrollProps {
 }
 
 const VideoScroll = ({ videos }: VideoScrollProps) => {
-  const [playingStates, setPlayingStates] = useState<{ [key: number]: boolean }>(
-    videos.slice(0, 5).reduce((acc, video) => ({ ...acc, [video.id]: true }), {})
-  );
+  const [playingStates, setPlayingStates] = useState<{ [key: number]: boolean }>({});
+
+  useEffect(() => {
+    setPlayingStates(
+      videos.slice(0, 5).reduce((acc, video) => ({ ...acc, [video.id]: true }), {})
+    );
+  }, [videos]);
 
   const togglePlay = (videoId: number, videoElement: HTMLVideoElement) => {
     if (playingStates[videoId]) {
