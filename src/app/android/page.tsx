@@ -2,6 +2,7 @@
 
 import GridBackground from '@/components/ui/GridBackground';
 import VideoScroll from '@/components/ui/VideoScroll';
+import Navigation from '@/components/ui/Navigation';
 import { Github } from 'lucide-react';
 
 export default function Android() {
@@ -59,6 +60,7 @@ export default function Android() {
         <GridBackground/>
       </div>
       <div className="relative z-10">
+        <Navigation />
         <div className="container mx-auto pt-20 pb-32">
           {projects.map((project, index) => (
             <div key={index} className="mb-32 last:mb-0">
