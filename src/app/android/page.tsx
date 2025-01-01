@@ -9,11 +9,11 @@ export default function Android() {
     {
       name: "SafeBite",
       description: [
-        "Food allergy detection app built with Kotlin",
-        "> Implemented real-time allergen detection using ML",
+        "Recipe App for people with food intolerances",
+        "> OTP verification and Google Sign-In for Authentication",
         "> Created an intuitive UI for quick allergen lookup",
-        "> Integrated barcode scanning for packaged foods",
-        "> Added community features for sharing safe recipes"
+        "> Alternative recipes with same nutrition and taste",
+        "> A rich database of 5000+ Recipes",
       ],
       github: "https://github.com/swatified/safebite",
       videos: [
@@ -24,11 +24,11 @@ export default function Android() {
       ]
     },
     {
-      name: "Project Two",
+      name: "Verbix",
       description: [
-        "Description of second project",
-        "> Key feature one",
-        "> Key feature two"
+        "Learning app for children with Dyslexia",
+        "> Writing and speech disability PATTERN RECOGNITION",
+        "> Curated writing and speech word-formation exercises"
       ],
       github: "https://github.com/swatified/verbix",
       videos: [
@@ -40,12 +40,10 @@ export default function Android() {
       ]
     },
     {
-      name: "Project Three",
+      name: "Android Quiz App",
       description: [
-        "Description of third project",
-        "> Major feature implementation",
-        "> Another key feature",
-        "> Additional functionality"
+        "> A Christmas-themed Android quiz application",
+        "> Made as an Android lead at GDG-On Campus (to take STUDENTS' FOLLOW-UP after my session)"
       ],
       github: "https://github.com/swatified/androidquiz",
       videos: [
