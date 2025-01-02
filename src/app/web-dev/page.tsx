@@ -10,52 +10,47 @@ import { reverse } from 'dns';
 export default function Web() {
   const projects = [
     {
-      name: "Global Data Visualization",
+      name: "Connectable",
       description: [
-        "Interactive world map data visualization platform",
-        "> Real-time country statistics and metrics",
-        "> Dynamic color-coded visualization",
-        "> Responsive design for multiple devices"
+        "A chatroom with all modern features sewed together!",
+        "> Implemented Web Sockets and MongoDB",
+        "> Text-decorations, Media rendering, Voice Recording, etc.",
+        "> Saved Messages and Clear Chat helps to keep Database manageable",
+        "> Twilio and Tenor APIs to make chatting fun thru Notifications and GIF!!"
       ],
       type: 'image',
       src: "/images/connectable.png",
-      github: "https://github.com/yourusername/global-viz",
-      live: "https://global-viz.demo.com"
+      github: "https://github.com/swatified/connectable"
     },
     {
       name: "Pet Adoption Platform",
       description: [
-        "Modern pet adoption interface",
-        "> Seamless pet browsing experience",
-        "> Interactive pet profiles",
-        "> Real-time availability updates"
+        "A fully functional website made using Webflow",
+        "> Multi-sectioned Landing Page with seamless animations",
+        "> Blog page made using Content Management System (CMS)"
       ],
       type: 'video',
       src: "/videos/petadoption.mp4",
-      github: "https://github.com/yourusername/pet-adoption",
-      live: "https://pet-adoption.demo.com"
+      live: "https://pet-adoption-project-by-swati.webflow.io/"
     },
     {
-      name: "Chat Application",
+      name: "GDG Community Platform",
       description: [
-        "Real-time messaging platform",
-        "> Instant message synchronization",
-        "> Cross-platform compatibility",
-        "> Dark mode interface"
+        "Aimed to provide a customizable and visually appealing space for students",
+        "> Dynamic Events Section to stay updated with upcoming events",
+        "> Community Gallery and Team Introduction"
       ],
       type: 'image',
       src: "/images/gdg.png",
-      github: "https://github.com/yourusername/chat-app",
-      live: "https://chat-app.demo.com",
+      github: "https://github.com/swatified/gdg-community-platform",
+      live: "https://www.gdgdronacharya.online/",
       reverse: true
     },
     {
-      name: "Healthcare Portal",
+      name: "Family Travel Tracker",
       description: [
-        "Modern healthcare service platform",
-        "> Patient-centric service dashboard",
-        "> Seamless appointment scheduling",
-        "> Responsive across all devices"
+        "> A Web App that visualizes your family's travels on a Dynamic World Map.",
+        "> With just a few clicks, users can add members, select colors, and mark off countries from their travel lists. (Made using EJS and PostgreSQL)"
       ],
       type: 'image',
       src: "/images/family.png",
@@ -63,44 +58,38 @@ export default function Web() {
       live: "https://healthcare.demo.com",
     },
     {
-      name: "404 Project",
+      name: "404 Fun",
       description: [
-        "Interactive Error Page Design",
-        "> Custom animation and interactions",
-        "> Engaging user experience",
-        "> Responsive layout across devices"
+        "> This innovative idea transforms boring 404 error pages into a source of entertainment",
+        "> Thus adding value to both users and website owners alike. (as it boosts engagement)",
+        "> Fresh Facts, Jokes and Poems with each Refresh!"
       ],
       type: 'video',
       src: "/videos/404.mp4",
-      github: "https://github.com/yourusername/404-project",
-      live: "https://404.demo.com"
+      github: "https://github.com/swatified/404-Fun",
+      live: "https://404web.pythonanywhere.com/"
     },
     {
-      name: "GDG On Campus",
+      name: "Healthcare Webpage",
       description: [
-        "Educational collaboration platform",
-        "> Interactive learning resources",
-        "> Cross-device accessibility",
-        "> Community engagement features"
+        "> Just a quick Landing Page I made during a Web-Design competition"
       ],
       type: 'image',
       src: "/images/healthcare.png",
-      github: "https://github.com/yourusername/gdg-campus",
-      live: "https://gdg-campus.demo.com",
+      github: "https://github.com/swatified/healthcare",
+      live: "https://swatified.github.io/healthcare/",
       reverse: true
     },
     {
-      name: "GDG On Campus",
+      name: "The Lending Library",
       description: [
-        "Educational collaboration platform",
-        "> Interactive learning resources",
-        "> Cross-device accessibility",
-        "> Community engagement features"
+        "> A book landing platform for university students to earn and help each other!",
+        "> Made using HTML, CSS, and Javascript for a friend's business idea"
       ],
       type: 'image',
       src: "/images/lending.png",
-      github: "https://github.com/yourusername/gdg-campus",
-      live: "https://gdg-campus.demo.com"
+      github: "https://github.com/swatified/The-Lending-Library",
+      live: "https://swatified.github.io/The-Lending-Library/"
     }
   ];
 
@@ -145,22 +134,26 @@ export default function Web() {
                     <div className="flex items-center gap-6 mb-8">
                       <h2 className="text-5xl font-bold text-white">{project.name}</h2>
                       <div className="flex gap-5">
-                        <a 
+                        {project.github && (
+                          <a 
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-white/70 hover:text-white transition-colors"
-                        >
-                          <Github size={28} />
-                        </a>
-                        <a 
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white/70 hover:text-white transition-colors"
-                        >
-                          <ExternalLink size={28} />
-                        </a>
+                          >
+                            <Github size={28} />
+                            </a>
+                          )}
+                          {project.live && (
+                            <a 
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer" 
+                            className="text-white/70 hover:text-white transition-colors"
+                            >
+                              <ExternalLink size={28} />
+                              </a>
+                            )}
                       </div>
                     </div>
                     <div className="space-y-3 text-xl text-white/80">
