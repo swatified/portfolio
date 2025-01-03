@@ -2,7 +2,6 @@
 
 import GridBackground from '@/components/ui/GridBackground';
 import Navigation from '@/components/ui/Navigation';
-import { Typewriter } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
