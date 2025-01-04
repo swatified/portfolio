@@ -40,23 +40,23 @@ export default function ML() {
       </div>
       <div className="relative z-10">
         <Navigation />
-        <div className="container max-w-[1400px] mx-auto pt-24 pb-32">
+        <div className="container max-w-[1400px] mx-auto pt-24 pb-32 px-4 md:px-6 lg:px-8">
           {projects.map((project, index) => (
-            <div key={index} className="mb-40 last:mb-0">
-              <div className="px-16 flex gap-16 items-start">
+            <div key={index} className="mb-20 last:mb-0 lg:mb-40">
+              <div className="flex flex-col lg:flex-row lg:gap-16 lg:items-start lg:px-16">
                 {/* Project Image */}
-                <div className="w-[60%]">
+                <div className="w-full lg:w-[60%] mb-8 lg:mb-0">
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden group">
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
                     <Image
-                    src={project.src}
-                    alt={project.name}
-                    fill
-                    className={`object-cover transition-transform duration-700 ${
-                      project.name === "Tour Mitra" 
-                      ? 'scale-125 group-hover:scale-150'
-                      : 'scale-110 group-hover:scale-100'
-                    }`}
+                      src={project.src}
+                      alt={project.name}
+                      fill
+                      className={`object-cover transition-transform duration-700 ${
+                        project.name === "Tour Mitra" 
+                        ? 'scale-125 group-hover:scale-150'
+                        : 'scale-110 group-hover:scale-100'
+                      }`}
                     />
                     {/* Frame Border */}
                     <div className="absolute inset-0 pointer-events-none z-20">
@@ -66,9 +66,9 @@ export default function ML() {
                 </div>
 
                 {/* Project Details */}
-                <div className="w-[40%] pt-8">
+                <div className="w-full lg:w-[40%] lg:pt-8">
                   <div className="flex items-center gap-6 mb-8">
-                    <h2 className="text-5xl font-bold text-white">{project.name}</h2>
+                    <h2 className="text-3xl lg:text-5xl font-bold text-white">{project.name}</h2>
                     {project.github && (
                       <a 
                         href={project.github}
@@ -80,7 +80,7 @@ export default function ML() {
                       </a>
                     )}
                   </div>
-                  <div className="space-y-3 text-xl text-white/80">
+                  <div className="space-y-3 text-lg lg:text-xl text-white/80">
                     {project.description.map((line, i) => (
                       <p 
                         key={i}
