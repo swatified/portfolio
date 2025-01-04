@@ -41,7 +41,7 @@ export default function Home() {
               </div>
 
               {/* Breadcrumb - with left margin to avoid cloud */}
-              <div className="ml-[300px] -translate-y-3/4">
+              <div className="ml-[300px] max-[768px]:mt-[4%] max-[640px]:mt-[4%] -translate-y-1/4 lg:-translate-y-3/4 sm:-translate-y-1/4">
                 <Breadcrumb />
               </div>
             </div>
