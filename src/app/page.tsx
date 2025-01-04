@@ -8,7 +8,27 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div className="dark">
-      <main>
+      <main className="relative">
+        {/* Top-left image - Moved outside GridBackground */}
+        <div className="absolute top-4 left-4 z-[100]">
+          <a
+            href="https://bento.me/swatified"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-10 h-10 rounded-lg overflow-hidden ring-2 ring-neutral-400/20 hover:ring-neutral-400/40 transition-all"
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src="/images/swati.png"
+                alt="Swati"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </a>
+        </div>
+
         <GridBackground>
           {/* Navigation at the top */}
           <Navigation />
