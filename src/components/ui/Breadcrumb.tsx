@@ -28,7 +28,7 @@ const Breadcrumb = () => {
   ];
 
   return (
-    <ul className="inline-block ml-[50px] list-none p-0 m-0">
+    <ul className="inline-flex ml-[-40%] flex-col-reverse lg:inline-block lg:ml-[50px] list-none p-0 m-0">
       {items.map((item, index, arr) => (
         <li
           key={index}
@@ -36,7 +36,7 @@ const Breadcrumb = () => {
             float-right p-[6px] bg-black rounded-[50px] relative -ml-[50px]
             max-[768px]:rounded-[10px] max-[640px]:rounded-[10px]
             transition-all duration-500 ease-in-out mt-[3px] transform translate-y-8 
-            lg:hover:-translate-y-0 mr-[54%] lg:mr-[0] sm:mr[0] md:mr[0] 
+            lg:hover:-translate-y-0 
             ${index === arr.length - 1 ? 'last:hover:mt-0' : ''}
           `}
         >
