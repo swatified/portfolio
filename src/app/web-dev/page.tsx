@@ -5,7 +5,6 @@ import Navigation from '@/components/ui/Navigation';
 import DesktopVideo from '@/components/ui/DesktopVideo';
 import { Github, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
-import { reverse } from 'dns';
 
 export default function Web() {
   const projects = [
@@ -102,13 +101,75 @@ export default function Web() {
         <Navigation />
         <div className="container max-w-[1400px] mx-auto pt-24 pb-32">
           {projects.map((project, index) => {
-            // Only apply reverse layout for image projects that have reverse:true
             const shouldReverse = project.type === 'image' && project.reverse;
             
             return (
-              <div key={index} className="mb-40 last:mb-0">
-                <div className={`px-16 flex gap-16 items-start ${shouldReverse ? 'flex-row-reverse' : ''}`}>
-                  {/* Project Media (Image or Video) */}
+              <div key={index} className="mb-20 lg:mb-40 last:mb-0">
+                {/* Mobile Layout */}
+                <div className="block px-4 lg:hidden">
+                  {/* Project Media */}
+                  <div className="w-full mb-8">
+                    {project.type === 'image' ? (
+                      <div className="relative aspect-[16/10] rounded-xl overflow-hidden group">
+                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
+                        <Image
+                          src={project.src}
+                          alt={project.name}
+                          fill
+                          className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 pointer-events-none z-20">
+                          <div className="absolute inset-0 rounded-xl ring-2 ring-white/20 shadow-lg" />
+                        </div>
+                      </div>
+                    ) : (
+                      <DesktopVideo videoSrc={project.src} />
+                    )}
+                  </div>
+
+                  {/* Project Details */}
+                  <div className="w-full">
+                    <div className="flex items-center gap-4 mb-6">
+                      <h2 className="text-3xl font-bold text-white">{project.name}</h2>
+                      <div className="flex gap-4">
+                        {project.github && (
+                          <a 
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/70 hover:text-white transition-colors"
+                          >
+                            <Github size={20} />
+                          </a>
+                        )}
+                        {project.live && (
+                          <a 
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer" 
+                            className="text-white/70 hover:text-white transition-colors"
+                          >
+                            <ExternalLink size={20} />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                    <div className="space-y-2 text-base text-white/80">
+                      {project.description.map((line, i) => (
+                        <p 
+                          key={i}
+                          className={line.startsWith('>') ? 'pl-4 border-l-2 border-white/20' : ''}
+                        >
+                          {line.startsWith('>') ? line.substring(2) : line}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop Layout - Exactly as original */}
+                <div className={`hidden lg:flex px-16 gap-16 items-start ${shouldReverse ? 'flex-row-reverse' : ''}`}>
+                  {/* Project Media */}
                   <div className="w-[60%]">
                     {project.type === 'image' ? (
                       <div className="relative aspect-[16/10] rounded-xl overflow-hidden group">
@@ -119,7 +180,6 @@ export default function Web() {
                           fill
                           className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700"
                         />
-                        {/* Frame Border */}
                         <div className="absolute inset-0 pointer-events-none z-20">
                           <div className="absolute inset-0 rounded-xl ring-2 ring-white/20 shadow-lg" />
                         </div>
@@ -136,24 +196,24 @@ export default function Web() {
                       <div className="flex gap-5">
                         {project.github && (
                           <a 
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white/70 hover:text-white transition-colors"
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/70 hover:text-white transition-colors"
                           >
                             <Github size={28} />
-                            </a>
-                          )}
-                          {project.live && (
-                            <a 
+                          </a>
+                        )}
+                        {project.live && (
+                          <a 
                             href={project.live}
                             target="_blank"
                             rel="noopener noreferrer" 
                             className="text-white/70 hover:text-white transition-colors"
-                            >
-                              <ExternalLink size={28} />
-                              </a>
-                            )}
+                          >
+                            <ExternalLink size={28} />
+                          </a>
+                        )}
                       </div>
                     </div>
                     <div className="space-y-3 text-xl text-white/80">
