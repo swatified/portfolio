@@ -21,7 +21,7 @@ export default function OpenSource() {
     }, 150);
    
     return () => clearInterval(intervalId);
-   }, []);
+  }, []);
 
   return (
     <div className="relative min-h-screen">
@@ -29,22 +29,23 @@ export default function OpenSource() {
         <GridBackground />
       </div>
       <div className="relative z-10">
- <Navigation />
- <div className="flex flex-col items-center justify-center h-[80vh] gap-20">
-   <h1 className="text-5xl font-bold text-gray-400 mt-48 -mb-10">
-     {text}
-     <span className="animate-blink">|</span>
-   </h1>
-   <div className="relative w-[600px] h-[600px]">
-     <Image
-       src="/images/wip.gif"
-       alt="Work in Progress"
-       fill
-       className="object-contain opacity-70"
-     />
-   </div>
- </div>
-</div>
+        <Navigation />
+        <div className="flex flex-col items-center justify-center h-[80vh] gap-10 lg:gap-20 px-4 lg:px-0">
+          <h1 className="text-3xl lg:text-5xl font-bold text-gray-400 mt-32 lg:mt-48 
+          -mb-20 lg:-mb-10">
+            {text}
+            <span className="animate-blink">|</span>
+          </h1>
+          <div className="relative w-[300px] h-[300px] lg:w-[600px] lg:h-[600px]">
+            <Image
+              src="/images/wip.gif"
+              alt="Work in Progress"
+              fill
+              className="object-contain opacity-70"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
