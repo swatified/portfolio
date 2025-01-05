@@ -53,8 +53,7 @@ export default function Web() {
       ],
       type: 'image',
       src: "/images/family.png",
-      github: "https://github.com/yourusername/healthcare",
-      live: "https://healthcare.demo.com",
+      github: "https://github.com/swatified/Family-Travel-Tracker"
     },
     {
       name: "404 Fun",
