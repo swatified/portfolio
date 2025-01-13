@@ -30,6 +30,18 @@ export default function ML() {
       type: 'image',
       src: "/images/tour.png",
       github: "https://github.com/learnervaibhav/Tourism-Spots-Assessment-System"
+    },
+    {
+      name: "NoShade API",
+      description: [
+        "An AI-powered toxic comments analyser",
+        "> Advanced sentiment analysis using RoBERTa model with toxicity detection",
+        "> Multi-label classification for 6 types of toxic content (Toxic, Severe Toxic, Obscene, Threat, Insult, Identity Hate)",
+        "> User-friendly web interface made using Gradio with real-time analysis"
+      ],
+      type: 'image',
+      src: "/images/noshade.png",
+      github: "https://github.com/swatified/NoShade_API"
     }
   ];
 
